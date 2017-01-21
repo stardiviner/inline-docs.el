@@ -1,5 +1,12 @@
 ;;; inline-docs.el --- Show inline contextual docs in Emacs.
 
+;; Author: stardiviner <numbchild@gmail.com>
+;; Keywords: inline docs overlay
+;; URL: https://github.com/stardiviner/inline-docs.el
+;; Created: 20th Jan 2017
+;; Version: 1.0.0
+;; Package-Requires: ((emacs "25.1"))
+
 ;;; Commentary:
 
 
