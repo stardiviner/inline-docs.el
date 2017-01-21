@@ -2,6 +2,10 @@
 
 Show inline contextual docs in Emacs.
 
+# Screenshots
+
+![screenshot](screenshot.png)
+
 # Usage
 
 ```elisp
