@@ -17,3 +17,7 @@ answered
 (inline-docs "FORMATED-STRING")
 (inline-docs "STRING")
 ```
+
+# related modes
+
+- [eldoc-overlay-mode](https://github.com/stardiviner/eldoc-overlay-mode)
