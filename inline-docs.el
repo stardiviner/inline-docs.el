@@ -4,7 +4,7 @@
 ;; Keywords: inline docs overlay
 ;; URL: https://github.com/stardiviner/inline-docs.el
 ;; Created: 20th Jan 2017
-;; Version: 1.0.0
+;; Version: 1.0.1
 ;; Package-Requires: ((emacs "25.1"))
 
 ;;; Commentary:
@@ -20,16 +20,29 @@
   "Show inline contextual docs in Emacs."
   :group 'docs)
 
+(defcustom inline-docs-position 'up
+  "Specify inline-docs display position, up or down.
+
+Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show on single line which don't has next line."
+  :type '(choice
+          :tag "Specify inline-docs display position."
+          (const :tag "up" up)
+          (const :tag "down" down))
+  :group 'inline-docs)
+
 (defcustom inline-docs-border-symbol ?―
   "Specify symbol for inline-docs border."
+  :type 'integer
   :group 'inline-docs)
 
 (defcustom inline-docs-prefix-symbol ?\s
   "Specify symbol for inline-docs prefix."
+  :type 'integer
   :group 'inline-docs)
 
 (defcustom inline-docs-indicator-symbol "➜"
   "Specify symbol for inline-docs indicator."
+  :type 'string
   :group 'inline-docs)
 
 (defface inline-docs-face
@@ -81,11 +94,16 @@
          start-pos end-pos)
     (unwind-protect
         (save-excursion
+          ;; clear overlay
           (inline-docs--clear-overlay)
-          (forward-line)
+          ;; decide overlay positions
+          (case inline-docs-position
+            ('up (forward-line 0))
+            ('down (forward-line)))
           (setq start-pos (point))
           (end-of-line)
           (setq end-pos (point))
+          ;; create overlay
           (setq inline-docs-overlay (make-overlay start-pos end-pos (current-buffer)))
           ;; change the face
           (if apply-face
