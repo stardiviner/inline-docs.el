@@ -33,7 +33,7 @@
   :group 'inline-docs)
 
 (defface inline-docs-face
-  '((t (:inherit italic)))
+  '((t (:inherit default)))
   "Face for `inline-docs-mode'."
   :group 'inline-docs)
 
