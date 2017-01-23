@@ -22,15 +22,18 @@
 
 (defcustom inline-docs-border-symbol ?―
   "Specify symbol for inline-docs border."
-  :group 'inline-docs)
+  :group 'inline-docs
+  :type 'character)
 
 (defcustom inline-docs-prefix-symbol ?\s
   "Specify symbol for inline-docs prefix."
-  :group 'inline-docs)
+  :group 'inline-docs
+  :type 'character)
 
 (defcustom inline-docs-indicator-symbol "➜"
   "Specify symbol for inline-docs indicator."
-  :group 'inline-docs)
+  :group 'inline-docs
+  :type 'string)
 
 (defface inline-docs-face
   '((t (:inherit default)))
