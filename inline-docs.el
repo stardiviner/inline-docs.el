@@ -5,7 +5,7 @@
 ;; URL: https://github.com/stardiviner/inline-docs.el
 ;; Created: 20th Jan 2017
 ;; Version: 1.0.1
-;; Package-Requires: ((emacs "25.1"))
+;; Package-Requires: ((emacs "24.3"))
 
 ;;; Commentary:
 
