@@ -14,6 +14,8 @@
 ;;; Code:
 ;;; ----------------------------------------------------------------------------
 
+(require 'cl-lib)
+
 (defvar inline-docs-overlay nil)
 
 (defgroup inline-docs nil
@@ -97,7 +99,7 @@ Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show
           ;; clear overlay
           (inline-docs--clear-overlay)
           ;; decide overlay positions
-          (case inline-docs-position
+          (cl-case inline-docs-position
             ('up (forward-line 0))
             ('down (forward-line)))
           (setq start-pos (point))
