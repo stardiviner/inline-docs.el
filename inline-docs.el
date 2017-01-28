@@ -34,14 +34,14 @@
   "Show inline contextual docs."
   :group 'docs)
 
-(defcustom inline-docs-position 'up
+(defcustom inline-docs-position 'above
   "Specify inline-docs display position, up or down.
 
 Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show on single line which don't has next line."
   :type '(choice
           :tag "Specify inline-docs display position."
-          (const :tag "up" up)
-          (const :tag "down" down))
+          (const :tag "up" above)
+          (const :tag "down" below))
   :group 'inline-docs)
 
 (defcustom inline-docs-border-symbol ?―
@@ -112,8 +112,8 @@ Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show
           (inline-docs--clear-overlay)
           ;; decide overlay positions
           (cl-case inline-docs-position
-            ('up (forward-line 0))
-            ('down (forward-line)))
+            ('above (forward-line 0))
+            ('below (forward-line)))
           (setq start-pos (point))
           (end-of-line)
           (setq end-pos (point))
