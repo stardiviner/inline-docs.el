@@ -1,4 +1,4 @@
-;;; inline-docs.el --- Show inline contextual docs in Emacs.
+;;; inline-docs.el --- Show inline contextual docs.
 
 ;; Author: stardiviner <numbchild@gmail.com>
 ;; Keywords: inline docs overlay
@@ -19,7 +19,7 @@
 (defvar inline-docs-overlay nil)
 
 (defgroup inline-docs nil
-  "Show inline contextual docs in Emacs."
+  "Show inline contextual docs."
   :group 'docs)
 
 (defcustom inline-docs-position 'up
