@@ -7,6 +7,15 @@ from [justbur](https://emacs.stackexchange.com/users/14114/justbur)
 answered
 [question](https://emacs.stackexchange.com/questions/29256/display-eldoc-help-info-behind-point) .
 
+# Support
+
+On theory, this mode should support all Emacs available platforms.
+
+Tested supported:
+
+- Emacs 24.3 or upper
+- Emacs TTY mode
+
 # Screenshots
 
 ![screenshot](screenshot.png)
