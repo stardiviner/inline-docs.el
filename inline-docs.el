@@ -46,17 +46,17 @@ Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show
 
 (defcustom inline-docs-border-symbol ?―
   "Specify symbol for inline-docs border."
-  :type 'integer
+  :type 'character
   :group 'inline-docs)
 
 (defcustom inline-docs-prefix-symbol ?\s
   "Specify symbol for inline-docs prefix."
-  :type 'integer
+  :type 'character
   :group 'inline-docs)
 
 (defcustom inline-docs-indicator-symbol "➜"
   "Specify symbol for inline-docs indicator."
-  :type 'string
+  :type 'character
   :group 'inline-docs)
 
 (defface inline-docs-face
