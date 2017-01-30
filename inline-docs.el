@@ -133,6 +133,7 @@ Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show
           (overlay-put inline-docs-overlay 'before-string str))
       (add-hook 'post-command-hook 'inline-docs--clear-overlay))))
 
+;;;###autoload
 (defun inline-docs-display-docs-momentary (format-string &rest args)
   "Display inline docs FORMAT-STRING under point with extra ARGS."
   (when format-string
