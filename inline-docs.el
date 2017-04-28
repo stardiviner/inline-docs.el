@@ -88,7 +88,7 @@ Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show
 (defun inline-docs--string-display-next-line (string apply-face)
   "Show STRING contents below point line until next command with APPLY-FACE."
   (let* ((border-line (make-string (window-body-width) inline-docs-border-symbol))
-         (prefix (make-string
+         (offset (make-string
                   (if (= (current-indentation) 0) ; fix (wrong-type-argument wholenump -1) when current indentation is 0 minus 1 will caused wholenump exception.
                       (current-indentation)
                     (- (current-indentation) 1))
@@ -96,7 +96,7 @@ Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show
          (str (concat (propertize border-line
                                   'face 'inline-docs-border-face)
                       "\n"
-                      prefix
+                      offset
                       (propertize (concat inline-docs-indicator-symbol " ")
                                   'face 'inline-docs-indicator-face)
                       (copy-sequence string) ; original eldoc string with format.
