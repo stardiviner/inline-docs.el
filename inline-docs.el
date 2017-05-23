@@ -60,7 +60,7 @@ Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show
   :group 'inline-docs)
 
 (defface inline-docs-face
-  '((t (:inherit default)))
+  '((t (:inherit font-lock-string-face)))
   "Face for `inline-docs-mode'."
   :group 'inline-docs)
 
