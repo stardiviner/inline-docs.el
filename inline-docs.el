@@ -85,7 +85,7 @@ Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show
     (delete-overlay inline-docs-overlay))
   (remove-hook 'post-command-hook 'inline-docs--clear-overlay))
 
-(defun inline-docs--string-display-next-line (string apply-face)
+(defun inline-docs--string-display (string apply-face)
   "Show STRING contents below point line until next command with APPLY-FACE."
   (let* ((border-line (make-string (window-body-width) inline-docs-border-symbol))
          (offset (make-string
@@ -137,7 +137,7 @@ Set `inline-docs-position' to `up' to fix issue that `inline-docs' does not show
 (defun inline-docs-display-docs-momentary (format-string &rest args)
   "Display inline docs FORMAT-STRING under point with extra ARGS."
   (when format-string
-    (inline-docs--string-display-next-line
+    (inline-docs--string-display
      (apply 'format format-string args)
      t)))
 
